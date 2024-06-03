@@ -112,7 +112,7 @@
                             <input type="text" class="form-control" id="zip" name="zip" placeholder="????">
                         </div>
                     </div>
-                        <!-- <div class="form-check ps-0 mt-3 custome-form-check">
+                        <div class="form-check ps-0 mt-3 custome-form-check">
                             <input class="checkbox_animated check-it" type="checkbox" name="saveAddress"
                                 id="saveAddress">
                             <label class="form-check-label checkout-label" for="saveAddress">Save this information for next time</label>
@@ -133,9 +133,9 @@
                             <div class="form-check custome-radio-box">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="paypal">
                                 <label class="form-check-label" for="paypal">PayPal</label>
-                            </div> -->
+                            </div> 
                         </div>
-                        <!-- <div class="row g-4" style="display: none;">
+                        <div class="row g-4" style="display: none;">
                             <div class="col-md-6">
                                 <label for="cc-name" class="form-label">Name on card</label>
                                 <input type="text" class="form-control" id="cc-name">
@@ -154,10 +154,11 @@
                                 <label for="cc-cvv" class="form-label">CVV</label>
                                 <input type="text" class="form-control" id="cc-cvv">
                             </div>
-                        </div> -->
-                        <button type="submit" class="btn btn-solid-default mt-4" type="button" >Place Order</button>
+                        </div>
+                        <button onclick="placeOrder()" class="btn btn-solid-default mt-4" type="button">Place Order</button>
                     </div>
                 </form>
+
                 <!--<div class="col-lg-4">
                     <div class="your-cart-box">
                         <h3 class="mb-3 d-flex text-capitalize">Your cart<span class="badge bg-theme new-badge rounded-pill ms-auto bg-dark">0</span></h3>
@@ -190,5 +191,12 @@
     </section>
 @endsection
 
+<script>
+  function placeOrder() {
+    // Perform any necessary actions before redirecting (e.g., form validation)
 
+    // Redirect the user to the /thankyou route
+    window.location.href = "{{ route('checkout.placeOrder') }}";
+  }
+</script>
 

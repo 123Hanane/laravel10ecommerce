@@ -12,7 +12,6 @@ use App\Http\Controllers\ThankController;
 use App\Http\Controllers\ThankyouController;
 use App\Http\Controllers\ConfirmationController;
 use App\Http\Controllers\AboutController;
-
 use App\Http\Controllers\ContactController;
 use App\views\cart;
 use App\Http\Controllers\AppController;
@@ -77,7 +76,7 @@ Auth::routes();
 Route::middleware('auth')->group(function(){
     Route::get('/my-account',[UserController::class,'index'])->name('user.index');
 });
-
 Route::middleware(['auth','auth.admin'])->group(function(){
     Route::get('/admin',[AdminController::class,'index'])->name('admin.index');
 });
+

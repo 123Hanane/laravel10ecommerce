@@ -229,9 +229,9 @@
                                             </a>
                                         </li>
                                         <li>
-                                        <a href="javascript:void(0)" onclick="addProductToWishlist('{{$product->id}}', '{{$product->name}}', 1, {{$product->regular_price}})" class="wishlist">
-                                            <i data-feather="heart"></i>
-                                        </a>
+                                            <a href="javascript:void(0)" onclick="addProductToWishlist({{$product->id}},'{{$product->name}}',1,{{$product->regular_price}})" class="wishlist">
+                                                <i data-feather="heart"></i>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -304,6 +304,7 @@
             </div>
         </div>
     </section>
+
 <form id="frmFilter" method="GET">
     <input type="hidden" name="page" id="page" value="{{$page}}" />
     <input type="hidden" name="size" id="size" value="{{$size}}" />      
@@ -388,3 +389,4 @@
             
       </script>
 @endpush
+

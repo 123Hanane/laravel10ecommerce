@@ -499,17 +499,17 @@
                                     </ul>
                                 </div>
                                 <div class="main-price">
-                                    <a href="{{route('shop.product.details',['slug'=>$rproduct->slug])}}" class="font-default">
-                                        <h5>{{$rproduct->name}}</h5>
-                                    </a>
-                                    <div class="listing-content">
-                                        <span class="font-light">{{$rproduct->category->name}}</span>
-                                        <p class="font-light">{{$rproduct->short_description}}</p>
-                                    </div>
-                                    <h3 class="theme-color">@if($rproduct->sale_price) {{ $product->sale_price }} @else {{$rproduct->regular_price}} @endif</h3>
-                                    <button onclick="location.href = 'cart.html';" class="btn listing-content">Add
-                                        To Cart</button>
-                                </div>
+                            <a href="{{route('shop.product.details',['slug'=>$rproduct->slug])}}" class="font-default">
+                                <h5>{{$rproduct->name}}</h5>
+                            </a>
+                            <div class="listing-content">
+                                <span class="font-light">{{$rproduct->category->name}}</span>
+                                <p class="font-light">{{$rproduct->short_description}}</p>
+                            </div>
+                            <h3 class="theme-color">@if($rproduct->sale_price) {{ $product->sale_price }} @else {{$rproduct->regular_price}} @endif</h3>
+                            <button onclick="location.href = 'cart.html';" class="btn listing-content">Add
+                                To Cart</button>
+                        </div>
                             </div>
                         </div>
                     </div>
